@@ -1,0 +1,124 @@
+.vertical-slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 810px; /* Adjust based on the required height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-slide-button {
+    position: absolute;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#vertical-prev-slide {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#vertical-next-slide {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vertical-image-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    overflow-y: auto;
+    height: 100%;
+    scrollbar-width: none; /* For Firefox */
+    scroll-snap-type: y mandatory;
+}
+
+.vertical-image-list::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.image-item {
+    width: 100%;
+    height: 200px; /* Adjust based on the item height */
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* Sự kiện trong năm 2024 */
+.new-vertical-slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 810px; /* Adjust based on the required height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-vertical-slide-button {
+    position: absolute;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#new-vertical-prev-slide {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#new-vertical-next-slide {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.new-vertical-image-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    overflow-y: auto;
+    height: 100%;
+    scrollbar-width: none; /* For Firefox */
+    scroll-snap-type: y mandatory;
+}
+
+.new-vertical-image-list::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.new-image-item {
+    width: 100%;
+    height: 200px; /* Adjust based on the item height */
+    object-fit: cover;
+    scroll-snap-align: start;
+}
