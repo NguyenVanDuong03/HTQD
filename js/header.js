@@ -1,20 +1,20 @@
 const headerHTML = `
 <header class="navbar navbar-expand-lg navbar-light" style="background-color: #B9D3F0;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt="Logo"></a>
+      <a class="navbar-brand" href="trangChu.html"><img src="imgs/logo.png" alt="Logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-around align-items-center">
           <li class="nav-item">
-            <a class="navbar-brand" aria-current="page" href="#">TRANG CHỦ</a>
+            <a class="navbar-brand" aria-current="page" href="trangChu.html">TRANG CHỦ</a>
           </li>
           <li class="nav-item">
             <a class="navbar-brand" aria-current="page" href="#">QUY ĐỊNH</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" aria-current="page" href="hoiNghiVaSuKien.html">HỘI NGHỊ VÀ SỰ KIỆN</a>
+            <a class="navbar-brand" aria-current="page" href="#">HỘI NGHỊ VÀ SỰ KIỆN</a>
           </li>
           <li class="nav-item">
             <a class="navbar-brand" aria-current="page" href="datPhong.html">ĐẶT PHÒNG</a>

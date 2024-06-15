@@ -2,12 +2,14 @@ document.getElementById("btn_date").addEventListener("click", function() {
     document.getElementById("input_date").style.display = "block";
     document.getElementById("btn_date").style.borderColor = "#413B89";
     document.getElementById("btn_all").style.borderColor = "#EBEBEE";
+    document.getElementById("body_content").style.display = "none";
 });
 
 document.getElementById("btn_all").addEventListener("click", function() {
     document.getElementById("btn_all").style.borderColor = "#413B89";
     document.getElementById("btn_date").style.borderColor = "#EBEBEE";
     document.getElementById("input_date").style.display = "none";
+    document.getElementById("body_content").style.display = "block";
 });
 
 document.getElementById("view_history").addEventListener("click", function() {

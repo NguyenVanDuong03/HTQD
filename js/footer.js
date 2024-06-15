@@ -1,6 +1,6 @@
 const footerHTML = `
 <footer style="background-color: #B9D3F0;">
-    <div class="p-3">
+    <div class="p-2">
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h3 class="d-flex justify-content-around">Thông tin liên hệ</h3>

@@ -22,59 +22,168 @@
     </head>
 
     <body>
-        <header class="navbar navbar-expand-lg navbar-light" style="border-bottom: 1px #CECECE solid;">
-            <div class="container-fluid">
-                <nav class="navbar navbar-light bg-light w-100">
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="trangChu.html"><div style="font-size: 35px;" class="fas fa-arrow-left-long"></div></a>
-                      <div class="d-flex align-items-center">
-                        <div class="me-4"><a href="#"><img style="width: 40px;" src="imgs/Notification.png" alt=""></a></div>
-                        <div class="dropdown">
-                            <button style="width: 300px; border: 1px #E8EFF7 solid;" class="btn btn-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="user ">
-                                    <a class="navbar-brand d-flex align-items-center justify-content-between" href="#">
-                                        <div class="d-flex">
-                                            <img src="imgs/user.png" alt=""> 
-                                            <div class="ms-2" style="width: 50px;">
-                                                <span style="font-size: 14px;">#30122002</span> <br>
-                                                <span>Lê Văn Quân</span>
-                                            </div>
-                                        </div>                                       
-                                        <i class="fas fa-angle-down"></i>
-                                    </a>
-                                  </div>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-                            <li><a class="dropdown-item" href="#">Thanh toán</a></li>
-                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-                            </ul>
-
-                        </div>
-                    </div>  
-                </nav>
-            </div>
-        </header>
+        <div id="header-info"></div>
 
         <main>
-            <div class="dialog" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: #4848484b;"></div>
-                <div class="dialog-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; width: 400px; height: 400px;"></div>
-                    <div class="dialog-header">
-                        <h3>Thông báo</h3>
-                        <button class="close">&times;</button>
-                    </div>
-                    <div class="dialog-body">
-                        <p>Bạn có chắc chắn muốn hủy dịch vụ này không?</p>
-                    </div>
-                    <div class="dialog-footer">
-                        <button class="btn btn-danger">Hủy</button>
-                        <button class="btn btn-primary">Xác nhận</button>
+            <!-- modal success -->
+            <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle2" aria-modal="true" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="d-flex justify-content-between" style="padding: 16px;">
+                            <h5 class="modal-title text-center" id="exampleModalCenteredScrollableTitle" style="font-weight: bold; width: 434px;">THÔNG TIN CHI TIẾT ĐẶT SỰ KIỆN</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="padding: 8px;"></button>
+                        </div>
+                        <div class="mb-4">
+                            <div class="" style="width: 310px; margin-left: 77px;">
+                                <div class="d-flex justify-content-between">
+                                    <span>Tổng tiền</span>
+                                    <span style="font-weight: bold;">10.000.000 VND</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span class="">Trạng thái</span>
+                                    <span class=" px-2 py-1" style="background-color: #41d19521; font-size: 12px; border-radius: 25px; color: #41D195;">Đã thanh toán</span>
+                                </div>
+                            </div>
+
+                            <div class="px-4 pt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>Mã dịch vụ:</span>
+                                    <span style="font-weight: bold;">#15267</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Họ tên:</span>
+                                    <span style="font-weight: bold;">Lê Văn Quân</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Địa chỉ:</span>
+                                    <span style="font-weight: bold;">175 Tây Sơn - Đống Đa - Hà Nội</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Số điện thoại:</span>
+                                    <span style="font-weight: bold;">0397099702</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Ngày nhận:</span>
+                                    <span style="font-weight: bold;">23h00 - 26/06/2024</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Ngày trả:</span>
+                                    <span style="font-weight: bold;">19h00 - 27/06/2024</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Loại dịch vụ:</span>
+                                    <span style="font-weight: bold;">Tổ chức sự kiện</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Tên dịch vụ:</span>
+                                    <span style="font-weight: bold;">Thượng thọ cụ Lê Quân</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Ngày đặt:</span>
+                                    <span style="font-weight: bold;">25/05/2024</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Số lượng người lớn:</span>
+                                    <span style="font-weight: bold;">100</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Số lượng trẻ con:</span>
+                                    <span style="font-weight: bold;">25</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="d-flex justify-content-center pb-4">
+                            <button type="button" class="px-5 py-2" style="border: 1px black solid; border-radius: 25px; color: black;" data-bs-dismiss="modal">Thoát</button>
+                            
+                        </div>
+                        
                     </div>
                 </div>
             </div>
 
-            <!--  -->
-            <div class="container hihi">
+            <!-- method error -->
+            <div class="modal fade" id="exampleModalCenteredScrollable3" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle3" aria-modal="true" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="d-flex justify-content-between" style="padding: 16px;">
+                            <h5 class="modal-title text-center" id="exampleModalCenteredScrollableTitle3" style="font-weight: bold; width: 434px;">THÔNG TIN CHI TIẾT ĐẶT SỰ KIỆN</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="padding: 8px;"></button>
+                        </div>
+                        <div class="mb-4">
+                            <div class="" style="width: 310px; margin-left: 77px;">
+                                <div class="d-flex justify-content-between">
+                                    <span>Tổng tiền</span>
+                                    <span style="font-weight: bold;">15.000.000 VND</span>
+                                </div>
+            
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span class="">Trạng thái</span>
+                                    <span class="px-2 py-1" style="background-color: #c10b0e17; font-size: 12px; border-radius: 25px; color: #C10B0E;">Chưa thanh toán</span>
+                                </div>
+                            </div>
+            
+                            <div class="px-4 pt-3">
+                                <p class="text-center" style="color: #F21818; margin: 0;">Vui lòng thanh toán trước 22h00 - 01/05/2024</p>
+                                <div class="d-flex justify-content-between">
+                                    <span>Mã dịch vụ:</span>
+                                    <span style="font-weight: bold;">#15268</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Họ tên:</span>
+                                    <span style="font-weight: bold;">Nguyễn Văn B</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Địa chỉ:</span>
+                                    <span style="font-weight: bold;">123 Trần Phú - Hà Đông - Hà Nội</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Số điện thoại:</span>
+                                    <span style="font-weight: bold;">0123456789</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Ngày nhận:</span>
+                                    <span style="font-weight: bold;">08h00 - 01/07/2024</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Ngày trả:</span>
+                                    <span style="font-weight: bold;">18h00 - 01/07/2024</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Loại dịch vụ:</span>
+                                    <span style="font-weight: bold;">Tổ chức hội nghị</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Tên dịch vụ:</span>
+                                    <span style="font-weight: bold;">Hội nghị khách hàng</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Ngày đặt:</span>
+                                    <span style="font-weight: bold;">20/06/2024</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Số lượng người lớn:</span>
+                                    <span style="font-weight: bold;">200</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Số lượng trẻ con:</span>
+                                    <span style="font-weight: bold;">50</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="d-flex justify-content-center pb-4">
+                            <button class="py-2 me-4" type="button" style="border: 1px black solid; border-radius: 25px; color: black; width: 150px; background-color: #B9D3F0;" ><a style="color: black; text-decoration: none;" href="thanhToan.html">Thanh toán</a></button>
+                            <button class="py-2" type="button" style="border: 1px black solid; border-radius: 25px; color: black; width: 150px;" data-bs-dismiss="modal">Thoát</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <div class="container">
                 <h3 class="mt-2">Trang chủ / Lịch sử đặt dịch vụ</h3>
                 <h1 class="text-center mt-3" style="font-weight: bold;">Lịch sử đặt dịch vụ</h1>
                 <div class="mt-4 d-flex align-items-center justify-content-between" style="height: 75px;">
@@ -117,14 +226,14 @@
                                 <th style="border-radius: 10px;" scope="col">Chi tiết</th>
                             </tr>
                         </thead>
-                        <tbody class="text-center">
+                        <tbody id="body_content" class="text-center">
                             <tr class="content">
                                 <td>#15267</td>
                                 <td>Tổ chức sự kiện</td>
                                 <td>25/05/2024</td>
                                 <td>10.000.000 VND</td>
                                 <td class="text-success">Đã thanh toán</td>
-                                <td><a style="color: black;" href="#"><div class="fas fa-eye"></div></a></td>
+                                <td><a style="color: black;" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable"><div class="fas fa-eye"></div></a></td>
                             </tr>
                             <tr class="content">
                                 <td>#15358</td>
@@ -156,7 +265,7 @@
                                 <td>25/05/2024</td>
                                 <td>10.000.000 VND</td>
                                 <td class="text-danger">Chưa thanh toán</td>
-                                <td><a style="color: black;" href="#"><div class="fas fa-eye"></div></a></td>
+                                <td><a style="color: black;" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable3"><div class="fas fa-eye"></div></a></td>
                             </tr>
                             <tr class="content">
                                 <td>#16609</td>
@@ -195,6 +304,7 @@
             <div id="footer-placeholder"></div>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
+         <script src="js/header_info.js"></script>
          <script src="js/footer.js"></script>
          <script src="js/lichSuDatDichVu.js"></script>
          <script src="public/assets/jquery-3.7.1.min.js"></script>
