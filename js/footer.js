@@ -21,7 +21,7 @@ const footerHTML = `
 
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
           <img src="imgs/logo.png" alt="Logo">
-          <p>"Vui lòng người đến, vừa lòng người đi"</p>
+          <p style="font-family: amita; font-size: 12.8px; font-weight: bold;">"Vui lòng người đến, Vừa lòng người đi"</p>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -32,19 +32,28 @@ const footerHTML = `
 
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
             <h3 class="d-flex justify-content-around mb-4">Quy định</h3>
-            <p class="d-flex justify-content-around"><a style="color: black; text-decoration: underline;" href="#">Quy định của khách sạn</a></p>
-            <p class="d-flex justify-content-around"><a style="color: black; text-decoration: underline;" href="#">Quy định đối với khách hàng</a></p>
+            <p class="footer-link d-flex justify-content-around"><a style="color: black; text-decoration: underline;" href="#">Quy định của khách sạn</a></p>
+            <p class="footer-link d-flex justify-content-around"><a style="color: black; text-decoration: underline;" href="#">Quy định đối với khách hàng</a></p>
         </div>
       
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h3 class="d-flex justify-content-around mb-5">Theo dõi trên</h3>
-            <div class="d-flex justify-content-around">
-                <img src="imgs/facebook.png" alt="Facebook">
-                <img src="imgs/instagram.png" alt="Instagram">
-                <img src="imgs/youtube.png" alt="Youtube">
-                <img src="imgs/tik-tok.png" alt="TikTok">
-            </div>
+        <h3 class="d-flex justify-content-around mb-5">Theo dõi trên</h3>
+          <div class="d-flex justify-content-around">
+              <a href="https://www.facebook.com">
+                  <img src="imgs/facebook.png" alt="Facebook">
+              </a>
+              <a href="https://www.instagram.com">
+                  <img src="imgs/instagram.png" alt="Instagram">
+              </a>
+              <a href="https://www.youtube.com">
+                  <img src="imgs/youtube.png" alt="Youtube">
+              </a>
+              <a href="https://www.tiktok.com">
+                  <img src="imgs/tik-tok.png" alt="TikTok">
+              </a>
+          </div>
         </div>
+
     </div>
   </footer>
 `;

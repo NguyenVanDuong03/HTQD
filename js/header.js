@@ -27,7 +27,7 @@ const headerHTML = `
           </li>
           <li class="nav-item">
             <div class="user ">
-              <a class="navbar-brand d-flex align-items-center" aria-current="page" href="#"><img src="imgs/user.png" alt=""> <i class="fas fa-angle-down"></i></a>
+              <a class="navbar-brand d-flex align-items-center" aria-current="page" href="#"><img src="imgs/user.png" style="margin-right: 10px;" alt=""> <i class="fas fa-angle-down"></i></a>
             </div>
           </li>
         </ul>
