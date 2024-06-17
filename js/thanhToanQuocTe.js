@@ -56,7 +56,7 @@ $(document).ready( () => {
         check($('#maBaoMat'), /^\d{4}$/, 'Vui lòng nhập thông tin mã bảo mật. Ví dụ hợp lệ: 1234');
     })
     $('#ngayHetHan').on('input', () => {
-        checkDate($('#ngayHetHan'), 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
+        check($('#ngayHetHan'), /^(0[1-9]|1[0-2])(\/)(20[2-9][0-9])$/,'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 06/2024');
     })
 
 
@@ -65,7 +65,7 @@ $(document).ready( () => {
 
         const iscard = check($('#soThe'), /^\d+$/, 'Số thẻ không được để trống và là ký tự số');
         
-        const isdate = checkDate($('#ngayHetHan'), 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
+        const isdate = check($('#ngayHetHan'), /^(0[1-9]|1[0-2])(\/)(20[2-9][0-9])$/,'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 06/2024');
         const ispassword = check($('#maBaoMat'),/^\d{4}$/, 'Vui lòng nhập thông tin mã bảo mật. Ví dụ hợp lệ: 1234');
         
 

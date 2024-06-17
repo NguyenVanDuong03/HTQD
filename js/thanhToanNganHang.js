@@ -68,8 +68,9 @@ $(document).ready( () => {
         check($('#soDienThoai'), /^0\d{9}$/, 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 0397099702');
     })
     $('#ngayHetHan').on('input', () => {
-        checkDate($('#ngayHetHan'), 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
+        check($('#ngayHetHan'), /^(0[1-9]|1[0-2])(\/)(20[2-9][0-9])$/,'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 06/2024');
     })
+   
 
 
     $('#thanhToan').click( (e) => {
@@ -78,7 +79,7 @@ $(document).ready( () => {
         const iscard = check($('#soThe'), /^\d+$/, 'Số thẻ không được để trống và là ký tự số');
         
         const isphone = check($('#soDienThoai'), /^0\d{9}$/, 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 0397099702');
-        const isdate = checkDate($('#ngayHetHan'), 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
+        const isdate = check($('#ngayHetHan'), /^(0[1-9]|1[0-2])(\/)(20[2-9][0-9])$/,'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
 
         if(iscard && isphone && isdate) {
             $('#exampleModalCenteredScrollable').modal('show');
@@ -105,5 +106,6 @@ $(document).ready( () => {
             tenChuTheInput.val("");
         }
     }
+    
 })
 
