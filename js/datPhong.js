@@ -51,6 +51,13 @@ $(document).ready( () => {
 
     $('input[name="check_radio"]').on('change', () => {
         checkRadio('check_radio', 'Vui lòng chọn phương thức thanh toán');
+        if ($('#radio1').is(':checked')) {
+            $('#exampleModalCenteredScrollable2').modal('show');
+            $('#exampleModalCenteredScrollable').modal('hide');
+        } else if ($('#radio2').is(':checked')) {
+            $('#exampleModalCenteredScrollable3').modal('show');
+            $('#exampleModalCenteredScrollable').modal('hide');
+        }
     });
 
     $('#submit_').click( (e) => {
@@ -62,7 +69,8 @@ $(document).ready( () => {
         const isradio = checkRadio('check_radio', 'Vui lòng chọn phương thức thanh toán');
 
         if(isname && isphone && isaddress && isradio) {
-            window.location.href = "datPhongThanhCong.html";
+            $('#exampleModalCenteredScrollable1').modal('show');
+            $('#exampleModalCenteredScrollable').modal('hide');
         }
     } )
 

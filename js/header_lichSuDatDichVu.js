@@ -25,7 +25,7 @@ const header_lichSuDatDichVu = `
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-                                <li><a class="dropdown-item" href="#">Thanh toán</a></li>
+                                <li><a class="dropdown-item" href="thanhToan.html">Thanh toán</a></li>
                                 <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
                                 </ul>
     
