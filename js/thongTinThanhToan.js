@@ -1,5 +1,5 @@
 const thongTinThanhToan = `
-<div class="mx-4 mt-2 p-3" style="width: 657px; height: 518px; border: 1px black solid;">
+<div class="mx-4 mt-2 p-3" style="width: 650px; height: 500px; border: 1px black solid;">
                 <div class="row">
                     <div class="col-12">
                         <h4 class=" text-center" style="font-weight: bold;">Thông tin thanh toán</h4>
