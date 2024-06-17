@@ -63,9 +63,7 @@ $(document).ready( () => {
     $('#soThe').on('input', () => {
         check($('#soThe'), /^\d+$/, 'Số thẻ không được để trống và là ký tự số');
     })
-    $('#tenChuThe').on('input', () => {
-        check($('#tenChuThe'), /^[a-zA-Z\s]+$/, 'Tên chủ thẻ không được để trống và là ký tự chữ');
-    })
+    $('#soThe').on('change', displayTenChuThe);
     $('#soDienThoai').on('input', () => {
         check($('#soDienThoai'), /^0\d{9}$/, 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 0397099702');
     })
@@ -78,11 +76,11 @@ $(document).ready( () => {
         e.preventDefault();
 
         const iscard = check($('#soThe'), /^\d+$/, 'Số thẻ không được để trống và là ký tự số');
-        const isname = check($('#tenChuThe'), /^[a-zA-Z\s]+$/, 'Tên chủ thẻ không được để trống và là ký tự chữ');
+        
         const isphone = check($('#soDienThoai'), /^0\d{9}$/, 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 0397099702');
         const isdate = checkDate($('#ngayHetHan'), 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
 
-        if(iscard && isname && isphone && isdate) {
+        if(iscard && isphone && isdate) {
             $('#exampleModalCenteredScrollable').modal('show');
             $('#btn_xacNhan').click( (e) => {
                 e.preventDefault();
@@ -91,4 +89,21 @@ $(document).ready( () => {
         }
     } )
 
+    function displayTenChuThe() {
+        var soTheValue = $('#soThe').val();
+        var tenChuTheInput = $('#tenChuThe');
+        
+        // Kiểm tra giá trị của "Số thẻ"
+       
+        if (soTheValue === "123456789") { // Đây là giá trị có sẵn để kiểm tra
+            // Nếu giá trị hợp lệ, hiển thị trường "Tên chủ thẻ"
+            tenChuTheInput.prop('readonly', false);
+            tenChuTheInput.val("LE VAN QUAN");
+        } else {
+            // Nếu giá trị không hợp lệ, ẩn trường "Tên chủ thẻ" và xóa giá trị
+            tenChuTheInput.prop('readonly', true);
+            tenChuTheInput.val("");
+        }
+    }
 })
+
