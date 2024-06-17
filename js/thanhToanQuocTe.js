@@ -51,8 +51,11 @@ $(document).ready( () => {
     $('#soThe').on('input', () => {
         check($('#soThe'), /^\d+$/, 'Số thẻ không được để trống và là ký tự số');
     })
+    $('#tenChuThe').on('input', () => {
+        check($('#tenChuThe'), /^[a-zA-Z\s]+$/, 'Tên chủ thẻ không được để trống và là ký tự chữ');
+    })
     $('#maBaoMat').on('input', () => {
-        check($('#maBaoMat'), '0', 'Vui lòng nhập thông tin mã bảo mật');
+        check($('#maBaoMat'), /^\d{4}$/, 'Vui lòng nhập thông tin mã bảo mật. Ví dụ hợp lệ: 1234');
     })
     $('#ngayHetHan').on('input', () => {
         checkDate($('#ngayHetHan'), 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
@@ -62,12 +65,13 @@ $(document).ready( () => {
     $('#thanhToan').click( (e) => {
         e.preventDefault();
 
-        const isname = check($('#soThe'), /^\d+$/, 'Số thẻ không được để trống và là ký tự số');
+        const iscard = check($('#soThe'), /^\d+$/, 'Số thẻ không được để trống và là ký tự số');
+        const isname = check($('#tenChuThe'), /^[a-zA-Z\s]+$/, 'Tên chủ thẻ không được để trống và là ký tự chữ');
         const isdate = checkDate($('#ngayHetHan'), 'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 27/06/2024');
-        const ispassword = check($('#maBaoMat'),'0', 'Vui lòng nhập thông tin mã bảo mật');
+        const ispassword = check($('#maBaoMat'),/^\d{4}$/, 'Vui lòng nhập thông tin mã bảo mật. Ví dụ hợp lệ: 1234');
         
 
-        if(isname && isdate && ispassword) {
+        if(iscard && isname && isdate && ispassword) {
             $('#exampleModalCenteredScrollable').modal('show');
             $('#btn_xacNhan').click( (e) => {
                 e.preventDefault();
