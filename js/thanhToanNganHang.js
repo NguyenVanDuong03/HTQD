@@ -100,8 +100,12 @@ $(document).ready( () => {
             // Nếu giá trị hợp lệ, hiển thị trường "Tên chủ thẻ"
             tenChuTheInput.prop('readonly', false);
             tenChuTheInput.val("LE VAN QUAN");
-        } else {
+        } 
+        
+        if(soTheValue!=="" && soTheValue!=="123456789"){
             // Nếu giá trị không hợp lệ, ẩn trường "Tên chủ thẻ" và xóa giá trị
+            var soThe = document.querySelector('.message');
+            soThe.textContent = 'Số thẻ không tồn tại. Vui lòng nhập lại';
             tenChuTheInput.prop('readonly', true);
             tenChuTheInput.val("");
         }
