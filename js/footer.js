@@ -21,7 +21,7 @@ const footerHTML = `
 
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
           <img src="imgs/logo.png" alt="Logo">
-          <p style="font-family: amita; font-size: 12.8px; font-weight: bold;">"Vui lòng người đến, Vừa lòng người đi"</p>
+          <p style="font-family: amita; font-size: 12.8px; font-weight: bold;">"Vui lòng khách đến, Vừa lòng khách đi"</p>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
