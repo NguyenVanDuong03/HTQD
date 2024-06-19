@@ -58,6 +58,6 @@ const footerHTML = `
   </footer>
 `;
 
-document.addEventListener("DOMContentLoaded", function() {
-document.getElementById('footer-placeholder').innerHTML = footerHTML;
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("footer-placeholder").innerHTML = footerHTML;
 });
