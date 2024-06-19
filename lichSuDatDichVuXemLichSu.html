@@ -10,7 +10,7 @@
         />
 
         <!-- Bootstrap CSS v5.2.1 -->
-        <link rel="stylesheet" href="css/lichSuDatDichVu.css">
+        <!-- <link rel="stylesheet" href="css/lichSuDatDichVu.css"> -->
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="public/assets/fontawesome/css/all.css">
         <link
@@ -189,11 +189,12 @@
                 <h1 class="text-center mt-3" style="font-weight: bold;">Lịch sử đặt dịch vụ</h1>
                 <div class="mt-4 d-flex align-items-center justify-content-between" style="height: 75px;">
                     <div class="">
-                        <Button id="btn_all" class="py-2" style="background-color: white; border: 1px #413B89 solid; border-radius: 25px; width: 200px;" type="button">
-                        Xem toàn bộ
-                    </Button>
-                    <Button id="btn_date" class="py-2 ms-4" style="background-color: white; border: 1px #EBEBEE solid; border-radius: 25px; width: 200px;" type="button"><a href="lichSuDatDichVuThanhCong.html" style="text-decoration: none; color: black;">Xem theo thời gian</a>
+                        <Button id="btn_all" class="py-2" style="background-color: white; border: 1px #EBEBEE solid; border-radius: 25px; width: 200px;" type="button">
+                            <a href="lichSuDatDichVu.html" style="text-decoration: none; color: black;">Xem toàn bộ</a>
                         
+                    </Button>
+                    <Button id="btn_date" class="py-2 ms-4" style="background-color: white; border: 1px #413B89 solid; border-radius: 25px; width: 200px;" type="button">
+                        Xem theo thời gian
                     </Button>
                     </div>
                     
@@ -209,14 +210,14 @@
                             <input id="to_date" type="date" class="form-control me-4" placeholder="To Date">
                             </div>
                             
-                            <button id="view_history" class="px-5 py-2" style="background-color: #B9D3F0; border: 1px #413B89 solid; border-radius: 25px;" type="button">Xem lịch sử</button>
+                            <button class="px-5 py-2" style="background-color: #B9D3F0; border: 1px #413B89 solid; border-radius: 25px;" type="button"> <a id="view_history"  href="#" style="text-decoration: none; color: black;">Xem lịch sử</a></button>
                         </div>
                         <div id="message" class="text-danger" style="margin-left: 30px;"></div>
                     </div>
                 </div>
             
                 <div class="mt-3" style="border: 1px black solid; border-radius: 10px;">
-                    <table id="table1" class="table table-borderless" style="height: 362px;">
+                    <table class="table table-borderless" style="height: 362px;">
                         <thead class="text-center" style="border-bottom: 1px solid #CECECE;">
                             <tr>
                                 <th style="border-radius: 10px;" scope="col">Mã dịch vụ</th>
@@ -285,7 +286,6 @@
                                 <td><a style="color: black;" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable3"><div class="fas fa-eye"></div></a></td>
                             </tr>
 
-
                             <tr class="content">
                                 <td></td>
                                 <td></td>
@@ -307,7 +307,7 @@
         <!-- Bootstrap JavaScript Libraries -->
          <script src="js/header_lichSuDatDichVu.js"></script>
          <script src="js/footer.js"></script>
-         <script src="js/lichSuDatDichVu.js"></script>
+         <script src="js/lichSuDatDichVuThanhCong.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
