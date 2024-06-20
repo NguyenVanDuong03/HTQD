@@ -22,6 +22,7 @@ function checkRadio(name, message = '') {
     }
 }
 
+
 // function checkAddress(id, regex, message = '') {
 //     if($(id).val().trim() === '') {
 //         $(id).parent().next('.message').text('Địa chỉ không được bỏ trống. Ví dụ: 175 Tây Sơn, Đống Đa, Hà Nội').show();
@@ -37,6 +38,7 @@ function checkRadio(name, message = '') {
 // }
 
 $(document).ready( () => {
+
     $('#inputName').on('input', () => {
         check($('#inputName'), /^[a-zA-Zà-Ỹ ]+$/, 'Họ tên không chứa ký tự số và ký tự đặc biệt. Ví dụ: Lê Văn Quân');
     })
@@ -51,12 +53,50 @@ $(document).ready( () => {
         checkRadio('check_radio', 'Vui lòng chọn phương thức thanh toán');
         if ($('#radio1').is(':checked')) {
             $('#exampleModalCenteredScrollable2').modal('show');
-            $('#exampleModalCenteredScrollable').modal('hide');
+            //$('#exampleModalCenteredScrollable').modal('hide');
         } else if ($('#radio2').is(':checked')) {
             $('#exampleModalCenteredScrollable3').modal('show');
-            $('#exampleModalCenteredScrollable').modal('hide');
+            //$('#exampleModalCenteredScrollable').modal('hide');
         }
+        $('#btnOk').on('click', () => {
+            $('#exampleModalCenteredScrollable2').modal('hide');
+            $('#exampleModalCenteredScrollable').modal('show');
+        });
+        $('#btnOk3').on('click', () => {
+            $('#exampleModalCenteredScrollable3').modal('hide');
+            $('#exampleModalCenteredScrollable').modal('show');
+        });
     });
+    function calculateTotal() {
+        const roomType = 250000;
+        const checkInDateString = $('#idNhanPhong').val();
+        const checkOutDateString = $('#idTraPhong').val(); 
+        const slnguoilon = $('#soLuongNguoiLon').val();
+        const sltreem= $('#soLuongTreEm').val();
+        if (checkInDateString && checkOutDateString) {
+            const checkInDate = new Date(checkInDateString);
+            const checkOutDate = new Date(checkOutDateString);
+    
+            const timeDiff = checkOutDate - checkInDate;
+            const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    
+            if (dayDiff > 0) {
+                const totalAmount = (slnguoilon*dayDiff *roomType)+(sltreem*dayDiff*(roomType/2));
+                $('#totalAmount').text(totalAmount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' }));
+            } else {
+                $('#totalAmount').text('N/A 1');
+            }
+        } else {
+            $('#totalAmount').text('N/A');
+        }
+    }
+    
+    // Gọi hàm tính tổng khi có sự thay đổi trong ngày nhận phòng và ngày trả phòng
+    $('#idNhanPhong, #idTraPhong, #soLuongNguoiLon, #soLuongTreEm').on('change', calculateTotal);
+    
+    // Gọi hàm tính tổng khi form được load
+    calculateTotal();
+
 
     $('#submit_').click( (e) => {
         e.preventDefault();
@@ -74,9 +114,16 @@ $(document).ready( () => {
         }
     } )
 
-})
+});
+
+
 
 $(document).ready(function() {
+    $('#room5').hide();
+    $('#room6').hide();
+    $('#room7').hide();
+    $('#room8').hide();
+
     var currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
 
@@ -172,6 +219,27 @@ $(document).ready(function() {
 
         var fromDate = $('#idNhanPhong').val();
         var toDate = $('#idTraPhong').val();
+        const slnguoilon = $('#soLuongNguoiLon').val();
+            if(slnguoilon>3){
+                $('#room5').show();
+                $('#room6').show();
+                $('#room7').show();
+                $('#room8').show();
+                $('#room1').hide();
+                $('#room2').hide();
+                $('#room3').hide();
+                $('#room4').hide();
+            }
+            else{
+                $('#room1').show();
+                $('#room2').show();
+                $('#room3').show();
+                $('#room4').show();
+                $('#room5').hide();
+                $('#room6').hide();
+                $('#room7').hide();
+                $('#room8').hide();
+            }
 
         if (!checkValidDate(fromDate)) {
             return;
@@ -186,10 +254,12 @@ $(document).ready(function() {
         }
 
         if (isFromDate && isToDate && isRoomType) {
-            // Thực hiện các hành động khác
-        }
+            //f
+        }     
     });
 });
+
+
 
 
 // 
@@ -239,4 +309,3 @@ $(document).ready(function() {
 
    
 // });
-
