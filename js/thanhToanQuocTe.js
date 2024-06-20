@@ -25,17 +25,15 @@ function check(id, regex, message = '') {
     return true;
 }
 
-function checkDate(id, message = '') {
-    const inputDate = new Date($(id).val());
-    const currentDate = new Date();
-
+function checkDate(id, regex, message = '') {
     if($(id).val().trim() === '') {
-        $(id).parent().next('.message').text(message).show();
+        $(id).parent().next('.message').text('Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 06/2024').show();
         return false;
-    } else if(inputDate < currentDate) {
-
-        $(id).parent().next('.message').text(message).show();
-        return false;
+    } else if (regex !== '0') {
+        if(!regex.test($(id).val())) {
+            $(id).parent().next('.message').text(message).show();
+            return false;
+        }
     }
     $(id).parent().next('.message').text('').show();
     return true;
@@ -56,7 +54,7 @@ $(document).ready( () => {
         // Kiểm tra giá trị của "Số thẻ"
         if (soTheValue === "123456789") { // Đây là giá trị có sẵn để kiểm tra
             // Nếu giá trị hợp lệ, hiển thị trường "Tên chủ thẻ"
-            tenChuTheInput.prop('readonly', false);
+      
             tenChuTheInput.val("LE VAN QUAN");
         } 
 
@@ -65,7 +63,7 @@ $(document).ready( () => {
         check($('#maBaoMat'), /^\d{4}$/, 'Vui lòng nhập thông tin mã bảo mật. Ví dụ hợp lệ: 1234');
     })
     $('#ngayHetHan').on('input', () => {
-        check($('#ngayHetHan'), /^(0[1-9]|1[0-2])(\/)(20[2-9][0-9])$/,'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 06/2024');
+        checkDate($('#ngayHetHan'), /^(0[1-9]|1[0-2])(\/)(20[2-9][0-9])$/,'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 06/2024');
     })
 
 
@@ -73,8 +71,7 @@ $(document).ready( () => {
         e.preventDefault();
 
         const iscard = check($('#soThe'), /^123456789$/, 'Số thẻ không tồn tại. Vui lòng nhập lại');
-        
-        const isdate = check($('#ngayHetHan'), /^(0[1-9]|1[0-2])(\/)(20[2-9][0-9])$/,'Vui lòng nhập đúng thông tin. Ví dụ hợp lệ: 06/2024');
+        const isdate = checkDate($('#ngayHetHan'), /^(0[7-9]|1[0-2])\/(2024|20[2-9][5-9]|20[3-9][0-9])$/,'Thẻ của bạn đã hết hạn. Vui lòng chọn thẻ khác');
         const ispassword = check($('#maBaoMat'),/^\d{4}$/, 'Vui lòng nhập thông tin mã bảo mật. Ví dụ hợp lệ: 1234');
         
 
