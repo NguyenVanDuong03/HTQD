@@ -1,0 +1,16 @@
+a:hover {
+    color: #fff !important;
+}
+
+button:hover{
+    background-color: #85B7FF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Tạo hiệu ứng bóng đổ khi hover */
+}
+
+.a_hover:hover{
+    color: #ff0000 !important;
+}
+
+.a_notHover:hover{
+    color: #000 !important;
+}
