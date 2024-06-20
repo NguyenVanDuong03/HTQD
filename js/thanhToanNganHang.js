@@ -68,7 +68,6 @@ $(document).ready( () => {
         // Kiểm tra giá trị của "Số thẻ"
         if (soTheValue === "123456789") { // Đây là giá trị có sẵn để kiểm tra
             // Nếu giá trị hợp lệ, hiển thị trường "Tên chủ thẻ"
-            tenChuTheInput.prop('readonly', false);
             tenChuTheInput.val("LE VAN QUAN");
         }
         
