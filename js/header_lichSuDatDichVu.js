@@ -5,13 +5,13 @@ const header_lichSuDatDichVu = `
                 <div class="container-fluid">
                     <nav class="navbar navbar-light bg-light w-100">
                         <div class="container-fluid">
-                          <a id="id_header" class="navbar-brand" href="trangChu.html"><div style="font-size: 35px;" class="fas fa-arrow-left-long"></div></a>
+                          <a id="id_header" class="navbar-brand" href="index.html"><div style="font-size: 35px;" class="fas fa-arrow-left-long"></div></a>
                           <div class="d-flex align-items-center">
                             <div class="me-4"><a href="#"><img style="width: 40px;" src="imgs/Notification.png" alt=""></a></div>
                             <div class="dropdown">
                                 <button style="width: 300px; border: 1px #E8EFF7 solid;" class="btn btn-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <div class="user ">
-                                        <a class="navbar-brand d-flex align-items-center justify-content-between" href="#">
+                                        <a class="navbar-brand d-flex align-items-center justify-content-between a_notHover" href="#">
                                             <div class="d-flex">
                                                 <img src="imgs/user.png" alt=""> 
                                                 <div class="ms-2" style="width: 50px;">
@@ -24,9 +24,9 @@ const header_lichSuDatDichVu = `
                                       </div>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-                                <li><a class="dropdown-item" href="thanhToan.html">Thanh toán</a></li>
-                                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                                <li><a class="dropdown-item a_notHover" href="#">Thông tin cá nhân</a></li>
+                                <li><a class="dropdown-item a_notHover" href="thanhToan.html">Thanh toán</a></li>
+                                <li><a class="dropdown-item a_notHover" href="#">Đăng xuất</a></li>
                                 </ul>
     
                             </div>
