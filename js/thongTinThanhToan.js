@@ -56,7 +56,7 @@ const thongTinThanhToan = `
                         <h5 style="font-weight: bold;" class="">Tổng thanh toán:</h5>
                     </div>
                     <div class="col-8 my-2">
-                        <h5 class="" style="color: #33AA29; font-weight: bold;">10.000.0000 VNĐ</h5>
+                        <h5 class="" style="color: #33AA29; font-weight: bold;">1.000.0000 VNĐ</h5>
                     </div>    
                 </div>
             </div>
