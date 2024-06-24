@@ -5,7 +5,7 @@ const header_lichSuDatDichVu = `
                 <div class="container-fluid">
                     <nav class="navbar navbar-light bg-light w-100">
                         <div class="container-fluid">
-                          <a id="id_header" class="navbar-brand" href="index.html"><div style="font-size: 35px;" class="fas fa-arrow-left-long"></div></a>
+                          <a id="id_header" class="navbar-brand a_notHover" href="index.html"><div style="font-size: 35px;" class="fas fa-arrow-left-long"></div></a>
                           <div class="d-flex align-items-center">
                             <div class="me-4"><a href="#"><img style="width: 40px;" src="imgs/Notification.png" alt=""></a></div>
                             <div class="dropdown">
