@@ -23,20 +23,6 @@ function checkRadio(name, message = '') {
 }
 
 
-// function checkAddress(id, regex, message = '') {
-//     if($(id).val().trim() === '') {
-//         $(id).parent().next('.message').text('Địa chỉ không được bỏ trống. Ví dụ: 175 Tây Sơn, Đống Đa, Hà Nội').show();
-//         return false;
-//     }else if(regex !== '0') {
-//         if(!regex.test($(id).val())) {
-//             $(id).parent().next('.message').text(message).show();
-//             return false;
-//         }
-//     }
-//     $(id).parent().next('.message').text('').show();
-//     return true;
-// }
-
 $(document).ready( () => {
 
     $('#inputName').on('input', () => {
@@ -68,7 +54,7 @@ $(document).ready( () => {
         });
     });
     function calculateTotal() {
-        const roomType = 250000;
+        const roomType = 1000000;
         const checkInDateString = $('#idNhanPhong').val();
         const checkOutDateString = $('#idTraPhong').val(); 
         const slnguoilon = $('#soLuongNguoiLon').val();
